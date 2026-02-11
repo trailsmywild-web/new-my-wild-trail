@@ -1,0 +1,464 @@
+.profile-page {
+  background: linear-gradient(135deg, #c0a06a, #343025, #dcd4cd);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 40px;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.profile-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.profile-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 45px;
+  border-radius: 25px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 550px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile Header */
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.profile-icon {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(192, 160, 106, 0.3);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #c0a06a;
+  box-shadow: 0 10px 30px rgba(192, 160, 106, 0.3);
+}
+
+.profile-title {
+  color: #2f2f2f;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: italic;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+.profile-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #c0a06a;
+}
+
+/* Profile Information */
+.profile-info {
+  margin: 35px 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 2px solid rgba(192, 160, 106, 0.15);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(192, 160, 106, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c0a06a;
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-label {
+  display: block;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.info-value {
+  color: #2f2f2f;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.info-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(192, 160, 106, 0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  background: white;
+  color: #2f2f2f;
+  font-family: 'Times New Roman', Times, serif;
+  transition: all 0.3s ease;
+}
+
+.info-input:focus {
+  outline: none;
+  border-color: #c0a06a;
+  box-shadow: 0 0 0 4px rgba(192, 160, 106, 0.15);
+}
+
+/* Action Buttons */
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  color: white;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(192, 160, 106, 0.4);
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #5cb85c, #449d44);
+  color: white;
+}
+
+.btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(92, 184, 92, 0.4);
+}
+
+.btn-cancel {
+  background: white;
+  color: #666;
+  border: 2px solid rgba(192, 160, 106, 0.3);
+}
+
+.btn-cancel:hover {
+  border-color: #c0a06a;
+  transform: translateY(-2px);
+}
+
+.btn-signout {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.btn-signout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 90px 20px 30px;
+  }
+
+  .profile-container {
+    padding: 40px 30px;
+  }
+
+  .profile-title {
+    font-size: 30px;
+  }
+
+  .profile-icon,
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 13px 18px;
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   SIGN OUT MODAL STYLES
+================================ */
+
+/* Login Modal Overlay */
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Container */
+.login-modal {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 45px 40px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Icon */
+.login-modal-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.login-modal-icon svg {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+/* Modal Content */
+.login-modal-content {
+  text-align: center;
+}
+
+.login-modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+  color: #2f2f2f;
+  margin-bottom: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+}
+
+.login-modal-message {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+/* Modal Buttons */
+.login-modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.login-modal-btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.5px;
+}
+
+.login-modal-btn-primary {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  color: white;
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+.login-modal-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(192, 160, 106, 0.5);
+}
+
+.login-modal-btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.login-modal-btn-secondary {
+  background: rgba(255, 255, 255, 0.5);
+  color: #2f2f2f;
+  border: 2px solid rgba(192, 160, 106, 0.3);
+}
+
+.login-modal-btn-secondary:hover {
+  background: #fff;
+  border-color: #c0a06a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Success/Info/Warning Variants */
+.login-modal.success .login-modal-icon {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+.login-modal.success .login-modal-btn-primary {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+.login-modal.success .login-modal-btn-primary:hover {
+  box-shadow: 0 10px 30px rgba(192, 160, 106, 0.5);
+}
+
+.login-modal.info .login-modal-icon {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+.login-modal.warning .login-modal-icon {
+  background: linear-gradient(135deg, #c0a06a, #a88a58);
+  box-shadow: 0 6px 20px rgba(192, 160, 106, 0.3);
+}
+
+/* Modal Responsive */
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 35px 30px;
+  }
+
+  .login-modal-title {
+    font-size: 24px;
+  }
+
+  .login-modal-message {
+    font-size: 14px;
+  }
+
+  .login-modal-buttons {
+    flex-direction: column;
+  }
+
+  .login-modal-btn {
+    width: 100%;
+  }
+}

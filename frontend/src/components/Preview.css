@@ -1,0 +1,214 @@
+/* ===============================
+   GLOBAL SAFETY
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   MAIN SECTION
+================================ */
+.preview-section {
+  min-height: 100vh;
+  background-color: #e8e6e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* ===============================
+   WRAPPER
+================================ */
+.preview-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.preview-header {
+  text-align: center;
+  margin-bottom: clamp(24px, 5vw, 32px);
+  padding: 0 clamp(16px, 5vw, 32px);
+}
+
+.preview-header h1 {
+  font-size: clamp(24px, 6vw, 56px);
+  font-weight: 800;
+  color: #2c3e50;
+  line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.preview-para {
+  max-width: 800px;
+  margin: 16px auto 32px auto;
+  padding: 0 clamp(16px, 5vw, 32px);
+  text-align: center;
+  font-size: clamp(14px, 3.5vw, 16px);
+  line-height: 1.6;
+}
+
+/* ===============================
+   SCROLL WRAPPER
+================================ */
+.preview-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 3vw, 16px);
+  width: 100%;
+  padding: 0 clamp(12px, 5vw, 32px);
+}
+
+/* ===============================
+   SCROLL BUTTONS
+================================ */
+.scroll-button {
+  background-color: #5a4a2c;
+  color: #e8e6e1;
+  border: none;
+  width: clamp(36px, 8vw, 50px);
+  height: clamp(36px, 8vw, 50px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-button:hover {
+  background-color: #4a3a1c;
+  transform: scale(1.05);
+}
+
+.scroll-button:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   SCROLL CONTAINER
+================================ */
+.preview-scroll {
+  overflow-x: auto;
+  background: transparent;
+  border-radius: 10px;
+  padding: clamp(8px, 3vw, 16px);
+  flex: 1;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.preview-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   IMAGE ROW
+================================ */
+.preview-row {
+  display: flex;
+  gap: clamp(12px, 4vw, 20px);
+}
+
+/* ===============================
+   IMAGE CARD
+================================ */
+.preview-card {
+  flex-shrink: 0;
+  width: clamp(220px, 60vw, 400px);
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   TRADEMARK OVERLAY
+================================ */
+.trademark-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(40px, 15vw, 100px);
+  color: white;
+  opacity: 0.5;
+  font-weight: bold;
+  pointer-events: none;
+  text-align: center;
+}
+
+/* ===============================
+   BUTTON WRAPPER
+================================ */
+.preview-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(24px, 6vw, 48px);
+  padding: 0 clamp(16px, 5vw, 32px);
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.preview-btn {
+  background-color: #5a4a2c;
+  color: #e8e6e1;
+  padding: clamp(10px, 3vw, 16px) clamp(20px, 6vw, 32px);
+  border: none;
+  cursor: pointer;
+  font-size: clamp(13px, 3.5vw, 15px);
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.preview-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .preview-section {
+    margin-top: -120px;
+  }
+}
+@media (max-width: 480px) {
+  .preview-section {
+    margin-top: -155px;
+    margin-bottom: -100px;
+  }
+}
+@media (max-width: 430px) {
+  .preview-section {
+    margin-top: -250px;
+    margin-bottom: -250px;
+  }
+}

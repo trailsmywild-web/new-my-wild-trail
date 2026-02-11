@@ -1,0 +1,100 @@
+
+
+/* Main container */
+.body-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background image */
+.body-background {
+  position: absolute;   
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Carousel Controls */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-arrow-left {
+  left: 20px;
+}
+
+.carousel-arrow-right {
+  right: 20px;
+}
+
+/* Dot Indicators */
+.carousel-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: white;
+  width: 30px;
+  border-radius: 6px;
+}
+
+.carousel-dot:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+  .body-background {
+    background-size: contain;
+    background-position: center;
+  }
+  .carousel-dots {
+    margin-bottom: 300px;
+    height: 10px;
+    gap: 5px;
+  }
+  .carousel-dot {
+    width: 5px;
+    height: 5px;
+    
+  }
+}

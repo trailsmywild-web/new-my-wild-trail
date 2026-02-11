@@ -1,0 +1,316 @@
+/* ===============================
+   GALLERY NAVBAR
+================================ */
+.gallery-navbar {
+  background: #cfcbbf;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.gallery-navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===============================
+   BRAND SECTION
+================================ */
+.gallery-navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.35s ease;
+}
+
+.gallery-brand-link:hover {
+  transform: scale(1.05);
+}
+
+.gallery-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.gallery-brand-link:hover .gallery-logo {
+  transform: rotate(360deg);
+}
+
+/* Logo Image Styling */
+.logo-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.gallery-brand-link:hover .logo-image {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.gallery-brand-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  letter-spacing: 1px;
+  font-style: italic;
+  position: relative;
+}
+
+/* Optional: Add accent underline like the tagline */
+.gallery-brand-name::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #6b8e23;
+  margin: 4px 0 0;
+  transition: width 0.3s ease;
+}
+
+.gallery-brand-link:hover .gallery-brand-name::after {
+  width: 100%;
+}
+
+/* ===============================
+   NAVIGATION LINKS
+================================ */
+.gallery-nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.gallery-nav-item {
+  position: relative;
+}
+
+.gallery-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  color: #2f2f2f;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gallery-nav-link svg {
+  transition: transform 0.3s ease;
+  stroke: #2f2f2f;
+}
+
+.gallery-nav-link:hover {
+  background: rgba(107, 142, 35, 0.1);
+  border-color: #6b8e23;
+  color: #6b8e23;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-nav-link:hover svg {
+  transform: translateY(-2px);
+  stroke: #6b8e23;
+}
+
+/* Active Link State */
+.gallery-nav-link.active {
+  background: #6b8e23;
+  border-color: #6b8e23;
+  color: #fff;
+  font-weight: 700;
+}
+
+.gallery-nav-link.active svg {
+  stroke: #fff;
+}
+
+/* ===============================
+   CART BADGE
+================================ */
+.gallery-cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #6b8e23;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #cfcbbf;
+}
+
+/* ===============================
+   MOBILE MENU TOGGLE
+================================ */
+.gallery-mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.gallery-mobile-menu-toggle:hover {
+  background: rgba(107, 142, 35, 0.1);
+  border-color: #6b8e23;
+}
+
+.gallery-mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #2f2f2f;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.gallery-mobile-menu-toggle:hover span {
+  background: #6b8e23;
+}
+
+.gallery-mobile-menu-toggle.active {
+  background: #6b8e23;
+  border-color: #6b8e23;
+}
+
+.gallery-mobile-menu-toggle.active span {
+  background: #fff;
+}
+
+.gallery-mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.gallery-mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.gallery-mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .gallery-navbar-container {
+    padding: 1rem;
+  }
+
+  .gallery-brand-name {
+    font-size: 1.3rem;
+  }
+
+  .gallery-nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #e8e6e1;
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .gallery-nav-links.active {
+    left: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .gallery-nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery-nav-link {
+    width: 100%;
+    padding: 1.2rem;
+    justify-content: center;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-mobile-menu-toggle {
+    display: flex;
+  }
+
+  .gallery-cart-badge {
+    top: 5px;
+    right: 20%;
+  }
+
+  /* Adjust logo size for mobile */
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-brand-name {
+    font-size: 1.1rem;
+  }
+
+  .gallery-logo svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .gallery-navbar-container {
+    padding: 0.8rem;
+  }
+
+  /* Further adjust logo for small screens */
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* ===============================
+   SMOOTH SCROLL BEHAVIOR
+================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent content jump when navbar is sticky */
+.wildlife-gallery {
+  padding-top: 0;
+}

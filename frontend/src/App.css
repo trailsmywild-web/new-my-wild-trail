@@ -1,0 +1,38 @@
+.App {
+    background-color: #e8e6e1;
+}
+
+/* ===============================
+   PREVENT IMAGE DRAGGING
+================================ */
+
+/* Prevent all images from being dragged */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Prevent text selection on images */
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+/* Prevent dragging on specific elements with background images */
+.gallery-card,
+.profile-icon,
+.logo-image,
+.wildlife-image {
+  -webkit-user-drag: none;
+  user-select: none;
+}

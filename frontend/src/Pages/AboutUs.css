@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-page {
+  width: 100%;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(40, 30, 20, 0.7), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  animation: fadeInUp 1.2s ease-out;
+  padding: 0 2rem;
+  max-width: 900px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-overlay h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  opacity: 0.95;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Photographer Intro Section */
+.photographer-intro {
+  max-width: 1400px;
+  margin: 2rem auto 0;
+  padding: 0 2rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.intro-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 500px;
+}
+
+.intro-image {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+
+.intro-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 50%, rgba(255,255,255,0.3));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-card:hover .intro-image::after {
+  opacity: 1;
+}
+
+.intro-content {
+  padding: 4rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #8b7355;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.intro-content h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.intro-highlight {
+  background: linear-gradient(120deg, #f5f1ed 0%, #fff 100%);
+  padding: 2rem;
+  border-left: 4px solid #8b7355;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.intro-highlight p {
+  font-size: 1.05rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Journey Section */
+.journey-section1 {
+  max-width: 1400px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.section-header1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header1 h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
+
+.section-divider1 {
+  width: 80px;
+  height: 3px;
+  background: #8b7355;
+  margin: 0 auto 1.5rem;
+}
+
+.section-header1 p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.journey-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.journey-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #8b7355, #c4a57b);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.journey-card:hover::before {
+  transform: scaleX(1);
+}
+
+.journey-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(139, 115, 85, 0.2);
+}
+
+.journey-image {
+  height: 280px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.journey-card:hover .journey-image {
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+.journey-content {
+  padding: 2rem;
+}
+
+.journey-year {
+  font-size: 0.9rem;
+  color: #8b7355;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.journey-content h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
+
+.journey-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: white;
+  padding: 6rem 2rem;
+  margin: 6rem 0;
+}
+
+.philosophy-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-content h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.philosophy-quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: #e0d5c7;
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.philosophy-quote::before,
+.philosophy-quote::after {
+  content: '"';
+  font-size: 4rem;
+  color: #8b7355;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.philosophy-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Stats Section */
+.stats-section {
+  max-width: 1200px;
+  margin: -3rem auto 6rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  border-right: 1px solid #eee;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #8b7355;
+  margin-bottom: 0.5rem;
+  display: block;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Message Section - UPDATED */
+.message-section {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.message-content {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  padding: 5rem 4rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.message-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b7355, #c4a57b, #8b7355);
+}
+
+.message-content::after {
+  content: '"';
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 15rem;
+  font-family: Georgia, serif;
+  color: rgba(139, 115, 85, 0.1);
+  line-height: 1;
+}
+
+.message-content h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #e0d5c7;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.message-text {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.message-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 2;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.message-highlight {
+  font-size: 1.35rem !important;
+  color: #c4a57b !important;
+  font-style: italic;
+  padding: 2rem 0 0 0 !important;
+  margin-top: 2.5rem !important;
+  border-top: 2px solid #8b7355;
+  font-weight: 400 !important;
+  text-align: center !important;
+  position: relative;
+}
+
+.message-highlight::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #8b7355;
+  border-radius: 2px;
+}
+
+/* Gallery Preview Section */
+.gallery-preview {
+  max-width: 1400px;
+  margin: 6rem auto;
+  padding: 0 2rem 6rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(139, 115, 85, 0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about-page {
+    background-color: white;
+  }
+  .hero {
+    
+    margin-top: -10px;
+  }
+  .intro-image {
+    height: 490px;
+    width: 320px;
+  }
+  .intro-content {
+    height: 115rem;
+    margin-left: -190px;
+    padding-right: 18px;
+    margin-bottom: -33rem;
+  }
+  .intro-label {
+    font-size: 12px;
+    text-align: justify;
+  }
+  .intro-content h2 {
+    font-size: 28px;
+  }
+  .intro-content p {
+    font-size: 12px;
+    text-align: justify;
+  }
+  .intro-highlight {
+    margin-top: 8px;
+  }
+  .photographer-intro {
+    height: 100px;
+  }
+  .journey-section1 {
+    margin-top: 55rem;
+  }
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  .philosophy-content h2 {
+    font-size: 32px;
+    margin-top: -4rem;
+  }
+  .philosophy-quote {
+    font-size: 18px;
+    line-height: 3rem;
+    margin-top: -3rem;
+  }
+  .philosophy-text {
+    margin-top: -2rem;
+  }
+  .message-content h2 {
+    font-size: 30px;
+  }
+  .message-content p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .message-highlight {
+    font-size: 1rem !important;
+  }
+}

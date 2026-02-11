@@ -1,0 +1,217 @@
+/* ===============================
+   NAVBAR (DESKTOP – UNCHANGED)
+================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(20px);
+  background-color: transparent;
+}
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Logo (DESKTOP) - FIXED */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-left: 12px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-top: 5px;
+}
+
+.nav-left:hover .logo {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+}
+
+/* Brand Name */
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 18px;
+}
+
+/* Center Menu (DESKTOP) */
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin-left: 250px;
+  padding: 0;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.nav-menu li:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   🍔 HAMBURGER (HIDDEN DESKTOP)
+================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* ===============================
+   📱 MOBILE – FINAL FIX
+================================ */
+@media (max-width: 768px) {
+
+  .nav {
+    height: 60px;
+    align-items: center;
+    width: 368px;
+  }
+
+
+  .nav-left {
+    align-items: center;
+  }
+
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    transform: none;
+    
+  }
+
+  .site-name {
+    font-size: 20px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transform: none;
+    margin-left: 0;
+
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    background-color: rgba(232, 230, 225, 0.95);
+    backdrop-filter: blur(20px);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-menu li {
+    font-size: 22px;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 900px) {
+  .nav {
+    width: 374px;
+    height: 60px;
+  
+  }
+  .hamburger {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+  }
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transform: none;
+    margin-left: ;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: rgba(232, 230, 225, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-menu li {
+    font-size: 22px;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+   .nav-left {
+    align-items: center;
+  }
+
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    transform: none;
+  }
+
+  .site-name {
+    font-size: 20px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}

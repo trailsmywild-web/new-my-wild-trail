@@ -1,0 +1,173 @@
+/* ===============================
+   WRAPPER
+================================ */
+.slogan-wrapper {
+  position: absolute;
+  top: 33%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.slogan-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  min-height: 100vh;              /* DESKTOP ONLY */
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 120px;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.slogan-content {
+  max-width: 672px;
+  text-align: left;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.slogan-heading {
+  margin-bottom: 24px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+}
+
+.highlight {
+  color: #f5b21b;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.slogan-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary1 {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background-color: #f5b21b;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid #0f2e2e;
+  color: #0f2e2e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   📱 MOBILE — REAL FIX
+================================ */
+@media (max-width: 768px) {
+
+  .slogan-wrapper {
+    /* top: 50%; */
+    margin-top: -70px;
+    transform: translateY(-50%);
+    
+  }
+
+  /* 🔑 CRITICAL FIX */
+  .slogan-container {
+    min-height: unset;           /* REMOVE 100vh */
+    height: auto;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .slogan-content {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .slogan-heading {
+    font-size: clamp(26px, 6.5vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .slogan-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-primary1,
+  .btn-outline {
+    height: 38px;
+    padding: 0 18px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+/* ===============================
+   📱 VERY SHORT SCREENS
+================================ */
+@media (max-height: 650px) {
+
+  .slogan-wrapper {
+    top: 45%;
+  }
+
+  .slogan-heading {
+    font-size: 24px;
+  }
+}
+@media (max-width: 900px) {  /*SE*/
+  .slogan-wrapper{
+    margin-top: -50px;
+    margin-right: -85px;
+  }
+
+  .slogan-buttons{
+    flex-direction: row;
+    width: 150px;
+    height: 15px;
+    margin-left: 15px;
+  }
+  .btn-primary1 {
+    font-size: 9px;
+    white-space: nowrap;
+    height: 20px;
+    margin-top: -15px;
+  }
+  .btn-outline {
+    font-size: 9px;
+    white-space: nowrap;
+    height: 20px;
+    margin-top: -15px;
+  }
+}
+@media (max-width: 900px) {
+   .slogan-wrapper {
+    margin-top: 10px;
+    margin-right: -50px;
+   } /*SE*/
+  }

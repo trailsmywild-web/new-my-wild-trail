@@ -1,0 +1,178 @@
+/* ========================= */
+/* FOOTER BASE (DESKTOP) */
+/* ========================= */
+
+.footer {
+    background-color: #e8e6e1;
+    padding: 38px 32px;
+    font-family: serif;
+    min-height: 300px;
+    height: 200px;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* LEFT SECTION */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: #5a4a2c;
+}
+
+.footer-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+    margin-left: 250px;
+    transform: translateY(8px);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-title {
+    font-size: 30px;
+    width: 220px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* TEXT BLOCKS */
+.offset-left {
+    margin-left: 355px;
+    margin-top: -36px;
+    line-height: 1.5;
+}
+
+.footer-address {
+    margin-left: 355px;
+    margin-top: -36px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* RIGHT SECTION – SOCIAL */
+.footer-social {
+    display: flex;
+    gap: 16px;
+    color: #5a4a2c;
+    margin-top: 100px;
+    margin-right: 250px;
+    flex-wrap: nowrap;
+}
+
+.footer-social svg {
+    transition: opacity 0.3s ease;
+}
+
+.footer-social svg:hover {
+    opacity: 0.7;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    max-width: 1280px;
+    margin: 40px auto 0;
+    border-top: 1px solid rgba(90, 74, 44, 0.2);
+    text-align: center;
+    color: #5a4a2c;
+    padding-top: 16px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* ========================= */
+/* 📱 TABLET & MOBILE FIX */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        min-height: auto;
+        padding: 28px 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    /* LEFT */
+    .footer-left {
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-logo-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        width: 72px;
+        height: 72px;
+        margin: 0;
+        transform: none;
+    }
+
+    .footer-title {
+        font-size: 22px;
+        width: auto;
+        margin: 0;
+        text-align: center;
+    }
+
+    .offset-left,
+    .footer-address {
+        margin: 0;
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    /* SOCIAL – FIX OVERFLOW */
+    .footer-social {
+        margin: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+        margin-top: 24px;
+    }
+}
+
+/* ========================= */
+/* 📱 SMALL PHONES */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    .footer-title {
+        font-size: 20px;
+    }
+
+    .footer-address,
+    .offset-left {
+        font-size: 13px;
+    }
+
+    .footer-social svg {
+        width: 20px;
+        height: 20px;
+    }
+}
