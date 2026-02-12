@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Preview.css";
 
-import parrot from "../assets/previewParrot.jpeg";
+import parrot from "../assets/PreviewParrot.jpeg";
 import Rhino from "../assets/PreviewRhino.jpeg";
 import wolf from "../assets/previewWolf.jpeg";
 
