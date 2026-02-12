@@ -9,15 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://wild-trails-my.web.app',
-    'https://wild-trails-my.firebaseapp.com',
-    'https://new-my-wild-trail-1.onrender.com'
-  ],
-  credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
