@@ -13,7 +13,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'https://wild-trails-my.web.app',
-    'https://wild-trails-my.firebaseapp.com'
+    'https://wild-trails-my.firebaseapp.com',
+    'https://new-my-wild-trail-1.onrender.com'
   ],
   credentials: true
 }));
