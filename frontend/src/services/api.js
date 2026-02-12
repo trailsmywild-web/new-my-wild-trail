@@ -1,8 +1,15 @@
 import axios from 'axios';
+
+// Debug logging
+console.log('🔧 VITE_API_URL from env:', import.meta.env.VITE_API_URL);
+console.log('🔧 MODE:', import.meta.env.MODE);
+
 const API_URL = import.meta.env.VITE_API_URL || 'https://new-my-wild-trail.onrender.com';
 
+console.log('🔧 Final API_URL being used:', API_URL);
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://new-my-wild-trail.onrender.com',
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -11,6 +18,7 @@ const api = axios.create({
 // Add token to requests
 api.interceptors.request.use(
   (config) => {
+    console.log('🔧 Making API request to:', config.baseURL + config.url);
     const token = localStorage.getItem('supabase_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -22,7 +30,6 @@ api.interceptors.request.use(
   }
 );
 
-// Auth API
 // Auth API
 export const authAPI = {
   signup: (data) => api.post('/api/auth/signup', data),
