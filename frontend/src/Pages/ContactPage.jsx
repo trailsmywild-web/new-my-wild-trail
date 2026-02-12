@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import BG from '../assets/ContactBg.jpg';
+import BG from '../assets/ContactBG.jpg';
 import './ContactPage.css';
 
 export default function ContactForm() {

@@ -45,7 +45,7 @@ import egle from "../assets/egle.jpeg";
 import Elephant from "../assets/Elephant.jpeg";
 import crocodile from "../assets/crocodile.jpeg";
 import bear from "../assets/bear.jpeg";
-import parrot from "../assets/previewParrot.jpeg";
+import parrot from "../assets/PreviewParrot.jpeg";
 import Rhino from "../assets/PreviewRhino.jpeg";
 import wolf from "../assets/previewWolf.jpeg";
 
